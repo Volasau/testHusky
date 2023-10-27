@@ -1,5 +1,31 @@
+button {
+  padding: 0;
+  border: none;
+  /* font: inherit; */
+  color: inherit;
+  background-color: transparent;
+  /* отображаем курсор в виде руки при наведении; некоторые
+  считают, что необходимо оставлять стрелочный вид для кнопок */
+  cursor: pointer;
+}
+
 .seach__input {
   width: 300px;
   height: 30px;
   margin: 8px;
+  border-radius: 6px;
+}
+
+.search__btn {
+  height: 35px;
+  padding: 0 5px;
+  border-radius: 6px;
+  background-color: rgb(107, 164, 249);
+  transition: color 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.search__btn:hover {
+  color: white;
+  background-color: rgb(18, 100, 225);
 }

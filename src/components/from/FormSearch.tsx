@@ -16,17 +16,15 @@ class Search extends Component<object, State> {
     };
   }
 
-  // componentDidMount(): void {
-  //   const savedQuery = localStorage.getItem('savedSearchQuery');
-  //   if (savedQuery) {
-  //     this.setState({ savedSearch: savedQuery });
-  //   }
-  // }
+  componentDidMount(): void {
+    const savedQuery = localStorage.getItem('savedSearchQuery');
+    if (savedQuery) {
+      this.setState({ savedSearch: savedQuery });
+    }
+  }
 
   handleSearch = (): void => {
-    if (this.state.searchQuery.trim() === '') {
-      this.showToast();
-    } else if (this.state.searchQuery !== this.state.searchQuery.trim()) {
+    if (this.state.searchQuery !== this.state.searchQuery.trim()) {
       this.showSpaceError();
     } else {
       localStorage.setItem('savedSearchQuery', this.state.searchQuery);
@@ -34,9 +32,6 @@ class Search extends Component<object, State> {
     }
   };
 
-  showToast = (): void => {
-    alert('Поле поиска не должно быть пустым!');
-  };
   showSpaceError = (): void => {
     alert('Поле поиска не должно содержать пробелы в начале или конце!');
   };
@@ -51,7 +46,9 @@ class Search extends Component<object, State> {
           value={this.state.searchQuery}
           onChange={(e) => this.setState({ searchQuery: e.target.value })}
         ></input>
-        <button onClick={this.handleSearch}>Search</button>
+        <button onClick={this.handleSearch} className="search__btn">
+          Search
+        </button>
       </form>
     );
   }

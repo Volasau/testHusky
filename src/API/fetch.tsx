@@ -1,9 +1,30 @@
-const url = `https://swapi.dev/api/planets/`;
+// const url = `https://swapi.dev/api/planets/`;
+
+// class ApiService {
+//   static async getPlanets() {
+//     const response = await fetch(`${url}`);
+//     const data = await response.json();
+//     if (data.results) {
+//       return data.results;
+//     } else {
+//       throw new Error('Отсутствуют данные "results"');
+//     }
+//   }
+// }
+
+// export default ApiService;
 
 class ApiService {
-  static async getPlanets() {
-    const response = await fetch(`${url}`);
+  static async getPlanets(searchQuery: string | null) {
+    let url = 'https://swapi.dev/api/planets';
+
+    if (searchQuery) {
+      url = `https://swapi.dev/api/planets/?search=${searchQuery}`;
+    }
+
+    const response = await fetch(url);
     const data = await response.json();
+
     if (data.results) {
       return data.results;
     } else {
@@ -13,6 +34,11 @@ class ApiService {
 }
 
 export default ApiService;
+
+//
+//
+
+//
 
 // const url = 'https://swapi.dev/api/planets/';
 

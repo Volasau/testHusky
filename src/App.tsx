@@ -34,17 +34,38 @@
 
 // export default App;
 
+import { Component } from 'react';
 import './App.css';
 import Body from './components/body/Body';
 import Header from './components/header/Header';
 
-function App() {
-  return (
-    <div className="wrapper">
-      <Header />
-      <Body />
-    </div>
-  );
+// function App() {
+//   return (
+//     <div className="wrapper">
+//       <Header />
+//       <Body />
+//     </div>
+//   );
+// }
+
+// export default App;
+
+class App extends Component {
+  handleButtonClick = () => {
+    throw new Error('Тестовая ошибка');
+  };
+
+  render() {
+    return (
+      <div className="App">
+        <div className="wrapper">
+          <Header />
+          <Body />
+        </div>
+        <button onClick={this.handleButtonClick}>Генерировать ошибку</button>
+      </div>
+    );
+  }
 }
 
 export default App;

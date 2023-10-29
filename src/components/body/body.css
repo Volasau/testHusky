@@ -2,4 +2,21 @@
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.body__loader {
+  margin-top: 50px;
+  animation: rotate 1s infinite linear;
+
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }

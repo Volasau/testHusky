@@ -14,10 +14,10 @@ const Card = (props: CardProps) => {
         🌌
         <span className="card__span-title">{props.name}</span>
       </div>
-      <div className="card__description text">
+      <div className="card__climate text">
         <span className="card__span">climate: </span> {props.climate}
       </div>
-      <div className="card__text text">
+      <div className="card__terrain text">
         <span className="card__span">terrain: </span>
         {props.terrain}
       </div>
@@ -25,7 +25,6 @@ const Card = (props: CardProps) => {
         <span className="card__span">population: </span>
         {props.population}
       </div>
-      {/* <img src={props.imageUrl} className="card__img" alt="Card Image" /> */}
     </div>
   );
 };

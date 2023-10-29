@@ -8,7 +8,6 @@
 .body__loader {
   margin-top: 50px;
   animation: rotate 1s infinite linear;
-
 }
 
 @keyframes rotate {

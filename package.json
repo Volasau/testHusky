@@ -12,11 +12,13 @@
     "format:fix": "prettier --write .",
     "precommit": "lint-staged",
     "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "test": "vitest"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "echo \"[Husky] pre-commit\" "
+      "pre-commit": "echo \"[Husky] pre-commit\" ",
+      "pre-push": "test"
     }
   },
   "dependencies": {
@@ -41,6 +43,7 @@
     "lint-staged": "^15.0.2",
     "prettier": "^3.0.3",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5"
+    "vite": "^4.4.5",
+    "vitest": "^0.34.6"
   }
 }

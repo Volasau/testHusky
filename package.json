@@ -13,12 +13,12 @@
     "precommit": "lint-staged",
     "lint-staged": "lint-staged",
     "prepare": "husky install",
-    "test": "vitest"
+    "test": "vitest --no-watch"
   },
   "husky": {
     "hooks": {
       "pre-commit": "echo \"[Husky] pre-commit\" ",
-      "pre-push": "test"
+      "pre-push": "vitest --no-watch"
     }
   },
   "dependencies": {
